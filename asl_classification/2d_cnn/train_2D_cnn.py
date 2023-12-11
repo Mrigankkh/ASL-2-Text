@@ -7,7 +7,7 @@ from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.utils import to_categorical
-
+import tqdm
 import pickle
 # Assuming you have a dataset with features (86-length landmark arrays) and corresponding labels (1 of 26 alphabets)
 # Replace X, y with your actual data
