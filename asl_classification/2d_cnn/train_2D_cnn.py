@@ -33,7 +33,7 @@ padded_data = [
 ]
 data = np.array(padded_data)
 
-X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.3, shuffle=True,random_state=42, stratify=labels)
+X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.2, shuffle=True,random_state=42, stratify=labels)
 
 # Encode labels
 label_encoder = LabelEncoder()
@@ -64,9 +64,9 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 # Train the model
 model.fit(X_train_reshaped, y_train_encoded, epochs=50, batch_size=32, validation_split=0.2)
 
-# Evaluate the model on the test set
-# loss, accuracy = model.evaluate(X_test_reshaped, y_test_encoded)
-# print(f'Test Accuracy: {accuracy * 100:.2f}%')
+#Evaluate the model on the test set
+loss, accuracy = model.evaluate(X_test_reshaped, y_test_encoded)
+print(f'Test Accuracy: {accuracy * 100:.2f}%')
 f = open('cnn_model_2d.p', 'wb')
 pickle.dump({'model': model}, f)
 f.close()
