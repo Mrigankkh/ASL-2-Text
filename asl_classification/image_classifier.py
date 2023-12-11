@@ -4,7 +4,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 
-model_dict = pickle.load(open('./model.p', 'rb'))
+model_dict = pickle.load(open('./cnn_model.p', 'rb'))
 model = model_dict['model']
 
 cap = cv2.VideoCapture(0)
@@ -62,7 +62,7 @@ while True:
 
         if len(data_aux) < 84:
             data_aux.extend([0] * (84 - len(data_aux)))  # Pad with zeros if less than 84 features
-        prediction = model.predict([np.asarray(data_aux)])
+        prediction = model.predict([np.asarray(data_aux)]) #X_train_reshaped = X_train.reshape(X_train.shape[0], X_train.shape[1], 1)
 
         predicted_character = labels_dict[int(prediction[0])]
 
