@@ -2,6 +2,10 @@ import os
 
 import cv2
 
+'''
+This file collects image data to put in the data directory. Each time the user presses "Q" when the file is running, a hundred 
+images are captured.
+'''
 
 DATA_DIR = './data'
 if not os.path.exists(DATA_DIR):

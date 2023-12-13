@@ -4,6 +4,10 @@ import cv2
 import pickle
 import matplotlib.pyplot as plt
 
+'''
+This file creates the data.pickle file from the images in the dataset that are located in the data directory.
+'''
+
 mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
@@ -41,7 +45,7 @@ for dir_ in os.listdir(DATA_DIR):
             data.append(data_aux)
             labels.append(dir_)
 
-
+# Writing to data.pickle
 f = open('data.pickle', 'wb')
 pickle.dump({'data': data, 'labels': labels}, f)
 f.close()
