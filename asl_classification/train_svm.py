@@ -10,6 +10,10 @@ import pickle
 # and y_train, y_test are arrays with shape (number_of_samples,)
 # Example:
 # X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=42)
+
+'''
+This file trains a svm model and prints it's accuracy.
+'''
 data_dict = pickle.load(open('data.pickle', 'rb'))
 print(data_dict)
 

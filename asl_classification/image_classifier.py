@@ -4,6 +4,10 @@ import cv2
 import mediapipe as mp
 import numpy as np
 
+'''
+This is the application file which opens a camera and captures sign language letters in real time.
+'''
+
 model_dict = pickle.load(open('./cnn_model.p', 'rb'))
 model = model_dict['model']
 

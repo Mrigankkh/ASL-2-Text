@@ -1,6 +1,10 @@
 import numpy as np
 import cv2
 
+''' 
+This file contains pre-processing function.
+'''
+
 minValue = 70
 
 

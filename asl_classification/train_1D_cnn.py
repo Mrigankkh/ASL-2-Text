@@ -6,6 +6,10 @@ from tensorflow.keras.layers import Conv1D, MaxPooling1D, Flatten, Dense
 from tensorflow.keras.utils import to_categorical
 import pickle
 
+'''
+This file, when executed trains the cnn model and prints its accuracy.
+'''
+
 # Load data from pickle file
 data_dict = pickle.load(open('data.pickle', 'rb'))
 data = data_dict['data']

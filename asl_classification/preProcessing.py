@@ -2,6 +2,10 @@ import os
 import cv2
 from image_processing import func
 
+'''
+This file executes pre processing of the data in order to ensure effective training.
+'''
+
 # Paths
 source_path = './data'    # Source directory where original data is stored
 output_path = 'data2'     # Destination directory for preprocessed data
